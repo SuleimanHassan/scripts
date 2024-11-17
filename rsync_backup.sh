@@ -3,6 +3,8 @@
 # cron every 1 hour:  0 * * * * bash /path/to/script.sh"
 
 # Configurable variables
+DESTINATION="/path/to/backup/path"
+
 BACKUP_ITEMS=(
     # files / folders
     "/path/to/item"
@@ -14,8 +16,6 @@ EXCLUDE_PATTERNS=(
     "vendor"
     "node_modules"
 )
-
-DESTINATION="$(pwd)"
 
 # Log file for backup
 LOG_FILE="$DESTINATION/backup.log"
